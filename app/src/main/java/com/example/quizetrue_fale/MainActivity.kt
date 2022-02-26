@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        checkQuestionNumber()
+        cheatQuestionNumber()
         listeners()
         setquestion()
     }
@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun listeners() {
-        binding.checkButton.setOnClickListener {
-            var checkButton = Intent(this, cheat::class.java)
-            startActivity(checkButton)
+        binding.cheatButton.setOnClickListener {
+            var cheatButton = Intent(this, cheat::class.java)
+            startActivity(cheatButton)
         }
 
         supportActionBar?.hide()   // ActionBar ra az bin mibarad
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun checkQuestionNumber(){
+    fun cheatQuestionNumber(){
         if (currentIndex == 0){
             binding.prevButton.isClickable = false
         }
