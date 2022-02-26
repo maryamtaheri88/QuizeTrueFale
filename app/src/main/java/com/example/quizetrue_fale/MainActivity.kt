@@ -13,13 +13,16 @@ class MainActivity : AppCompatActivity() {
     var max = 9
     var answer :Int = 0
 
+    var currentcheat = 0
+    var listOfnumberOfCheat = arrayListOf<Int>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        cheatQuestionNumber()
+        checkQuestionNumber()
         listeners()
         setquestion()
     }
@@ -31,12 +34,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+    fun checkQuestionNumber(){
+        if (currentIndex == 0){
+            binding.prevButton.isClickable = false
+        }
+        if (currentIndex == max){
+            binding.nextButton.isClickable = false
+        }
+    }
     private fun listeners() {
         binding.cheatButton.setOnClickListener {
             var cheatButton = Intent(this, cheat::class.java)
+            cheatButton.putExtra("answer",SetData.que[currentIndex].correctAnswer)
             startActivity(cheatButton)
+            currentcheat = SetData.que[currentIndex].id
+            listOfnumberOfCheat.add(currentcheat)
         }
+
 
         supportActionBar?.hide()   // ActionBar ra az bin mibarad
 
@@ -68,12 +82,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun cheatQuestionNumber(){
-        if (currentIndex == 0){
-            binding.prevButton.isClickable = false
-        }
-        if (currentIndex == max){
-            binding.nextButton.isClickable = false
-        }
-    }
+
 }
