@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Quizetrue_fale">
         <activity
             android:name=".cheat"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
