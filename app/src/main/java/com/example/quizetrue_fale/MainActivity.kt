@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     var currentIndex = 0
     var max = 9
-    var answer :Int = 0
+    lateinit var answer : String
 
     var currentcheat = 0
     var listOfnumberOfCheat = arrayListOf<Int>()
@@ -56,16 +56,16 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.trueButton.setOnClickListener {
-            if( answer == 1)
+            if( answer == "true")
                 Toast.makeText(this, R.string.true_text, Toast.LENGTH_SHORT).show()
-            if( answer == 2)
+            if( answer == "false")
                 Toast.makeText(this, R.string.false_text, Toast.LENGTH_SHORT).show()
         }
 
         binding.falseButton.setOnClickListener {
-            if( answer == 2)
+            if( answer == "false")
                 Toast.makeText(this, R.string.true_text, Toast.LENGTH_SHORT).show()
-            if( answer == 1)
+            if( answer == "true")
                 Toast.makeText(this, R.string.false_text, Toast.LENGTH_SHORT).show()
         }
 

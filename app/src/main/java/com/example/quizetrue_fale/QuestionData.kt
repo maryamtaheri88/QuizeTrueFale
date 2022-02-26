@@ -5,5 +5,5 @@ data class QuestionData(
     var id:Int,
     var answer1:String,
     var answer2 :String,
-    var correctAnswer:Int
+    var correctAnswer:String
 )

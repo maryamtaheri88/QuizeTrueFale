@@ -10,70 +10,70 @@ object SetData {
             1,
             "yes",
             "no",
-            2
+            "false"
         )
         var question2 = QuestionData(
             "3+4=9?",
             2,
             "yes",
             "no",
-            1
+            "true"
         )
         var question3 = QuestionData(
             "4/2=2",
             3,
             "yes",
             "no",
-            1
+            "true"
         )
         var question4 = QuestionData(
             "5/3=3",
             4,
             "yes",
             "no",
-            2
+            "false"
         )
         var question5 = QuestionData(
             "sheep can swim.",
             5,
             "yes",
             "no",
-            2
+            "false"
         )
         var question6 = QuestionData(
             "bird cann`t fly.",
             6,
             "yes",
             "no",
-            2
+            "false"
         )
         var question7 = QuestionData(
             "summer is cold.",
             7,
             "yes",
             "no",
-            2
+            "false"
         )
         var question8 = QuestionData(
             "winter is cold?",
             8,
             "yes",
             "no",
-            1
+            "true"
         )
         var question9 = QuestionData(
             "sea is green.",
             9,
             "yes",
             "no",
-            2
+            "true"
         )
         var question10 = QuestionData(
             "sun is yellow.",
             10,
             "yes",
             "no",
-            1
+            "true"
         )
 
         que.add(question1)
