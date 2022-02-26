@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Quize(true_fale)</string>
+    <string name="app_name">true false</string>
+    <string name="true_text">true</string>
+    <string name="false_text">false</string>
+    <string name="prev">prev</string>
+    <string name="next">next</string>
+    <string name="check">check</string>
+    <string name="quastion">quastion</string>
+    <string name="is_this_a_turtle">Is this a turtle?</string>
 </resources>
